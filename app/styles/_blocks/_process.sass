@@ -1,0 +1,83 @@
+.process
+
+  &__group
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+
+  &__list
+    width: 100%
+    margin-bottom: rem(60px)
+    +tablet
+      width: 48%
+    +laptop
+      margin-bottom: 0
+      width: 24%
+
+  &__list:last-child
+    margin-bottom: 0
+
+
+  &__list:nth-child(3)
+    +tablet
+      margin-bottom: 0
+
+
+
+  &__step
+    overflow: hidden
+    margin-top: rem(-70px)
+    z-index: -1
+    text-align: center
+    position: relative
+    box-sizing: border-box
+    width: 100%
+    background: $cardColor
+    border-radius: rem(20px)
+    padding: rem(75px) rem(10px) rem(60px)
+
+
+  &__wrap
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    width: rem(140px)
+    height: rem(140px)
+    border-radius: 50%
+    background: $cardColor
+
+  &__number
+    position: absolute
+    top:  100%
+    left: 100%
+    transform: translate(-50%, -50%)
+    width: rem(140px)
+    height: rem(140px)
+    border-radius: 50%
+    background: #2F3061
+
+  &__number span
+    color: $WhiteColor
+    font-size: rem(30px)
+    position: relative
+    right: 22%
+    top: 18%
+
+  &__title
+    margin-bottom: rem(20px)
+    color: $titleColor
+    font-size: rem(20px)
+    text-transform: uppercase
+
+  &__subtitle
+    margin: 0 auto
+    color: $subtitleColor
+    +phone
+      width: 70%
+
+
+  &__icon
+    max-width: 100%
+    height: rem(67px)

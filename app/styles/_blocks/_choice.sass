@@ -1,0 +1,80 @@
+.choice
+
+  &__group
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__advantage
+    width: 100%
+    margin-bottom: rem(60px)
+    text-align: center
+    +tablet
+      width: 48%
+    +laptop
+      margin-bottom: 0
+      width: 24%
+
+  &__advantage:last-child
+    margin-bottom: 0
+
+  &__advantage:nth-child(3)
+    +tablet
+      margin-bottom: 0
+
+
+  &__icon
+    height: rem(70px)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__wrap
+    position: relative
+    margin: 0 auto
+    z-index: 2
+    width: rem(140px)
+    height: rem(140px)
+    border-radius: 50%
+    background-color: $choiceColor
+
+  &__wrap:before
+    content: " "
+    border-radius: 50%
+    position: absolute
+    z-index: -1
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: rem(160px)
+    height: rem(160px)
+    background-color: $choiceColor
+    opacity: .4
+
+  &__wrap:after
+    z-index: -1
+    content: " "
+    border-radius: 50%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: rem(180px)
+    height: rem(180px)
+    background-color: $choiceColor
+    opacity: .2
+
+
+  &__title
+    margin-top: rem(50px)
+    color: $titleColor
+    font-size: rem(20px)
+    text-transform: uppercase
+
+  &__subtitle
+    width: 85%
+    margin: rem(20px) auto 0
+    color: $subtitleColor
+    +desktop
+      width: 95%

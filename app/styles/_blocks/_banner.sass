@@ -1,0 +1,186 @@
+.banner
+  position: relative
+  right: 0
+  background: url("../images/header/banner.png") no-repeat center
+  width: 100%
+  height: 100vh
+
+  &__main
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__slider
+    width: 100%
+    height: calc(100vh - 120px)
+    display: flex
+    align-items: center
+    justify-content: center
+    +tablet
+      width: 90%
+    +laptop
+      width: 36%
+    +desktop
+      width: 40%
+
+  &__title
+    font-weight: 800
+    text-align: center
+    color: $titleColor
+    font-size: rem(30px)
+    line-height: rem(48px)
+    +tablet
+      width: 80%
+      text-align: left
+      font-size: rem(36px)
+
+  &__img
+    display: none
+    +laptop
+      display: block
+      max-width: 100%
+
+
+
+
+  .owl-theme .owl-dots
+    +tablet
+      text-align: left
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+    background: $secondColor
+
+
+  &__subtitle
+    text-align: center
+    font-size: rem(18px)
+    color: $subtitleColor
+    +tablet
+      text-align: left
+      width: 70%
+
+  &__title span
+    color: $secondColor
+
+
+.header
+  padding: rem(15px) 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+
+  &__wrap
+    transition: 0.5s
+
+  &__logo
+    position: relative
+    width: 100%
+    max-width: rem(92px)
+    +tablet
+      max-width: rem(145px)
+
+  &__menu
+    position: fixed
+    font-family: $font
+    transition: 0.5s
+    display: flex
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    padding: rem(30px) 0
+    flex-direction: column
+    align-items: center
+    -webkit-box-align: center
+    -webkit-align-items: center
+    -ms-flex-align: center
+    overflow: hidden
+    justify-content: space-around
+    width: 100%
+    height: calc(100vh - 100px)
+    top: 0
+    right: -80%
+    +laptop
+      position: static
+      background: none
+      justify-content: flex-end
+      flex-direction: row
+      height: 0
+
+  &__list
+    +laptop
+      margin-right: rem(25px)
+
+  &__list:last-child
+    +laptop
+      margin-right: rem(40px)
+
+  &__link
+    transition: .3s
+    display: inline-block
+    font-size: rem(18px)
+    color: $WhiteColor
+    +laptop
+      font-size: rem(16px)
+
+
+  &__link:hover
+    color: $secondColor
+
+  &__contact
+    margin-left: auto
+    margin-right: rem(10px)
+    border: 1px solid rgba(215, 255, 84, 0)
+    border-radius: rem(20px)
+    color: $mainColor
+    font-weight: 500
+    text-align: center
+    padding: rem(12px) rem(10px)
+    background: $secondColor
+    transition: 0.5s
+    +laptop
+      font-size: rem(18px)
+      margin-right: 0
+      width: 24%
+    +desktop
+      width: 20%
+
+  &__contact:hover
+    border: 1px solid rgba(215, 255, 84, 1)
+    color: $WhiteColor
+    background: none
+
+
+.hamburger_trigger
+  position: relative
+  width: rem(40px)
+  height: rem(25px)
+  margin-left: rem(10px)
+  +laptop
+    display: none
+
+.hamburger_trigger span,
+.hamburger_trigger span:before,
+.hamburger_trigger span:after
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: rem(3px)
+  background: #a4aead
+  border-radius: rem(5px)
+  transition: linear 0.2s
+
+.hamburger_trigger span:before,
+.hamburger_trigger span:after
+  content: ' '
+  display: block
+
+.hamburger_trigger span:before
+  transform: translateY(18px)
+
+.hamburger_trigger span:after
+  transform: translateY(9px)
+
+
+

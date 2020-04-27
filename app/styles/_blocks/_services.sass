@@ -1,0 +1,59 @@
+.services
+
+  &__group
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__service
+    position: relative
+    overflow: hidden
+    z-index: -2
+    padding: rem(30px)
+    box-sizing: border-box
+    background: $cardColor
+    border-radius: rem(20px)
+    width: 100%
+    margin-bottom: rem(40px)
+    text-align: center
+    +tablet
+      width: 48%
+    +laptop
+      margin-bottom: 0
+      width: 32%
+
+
+  &__service:last-child
+    margin-bottom: 0
+
+
+  &__curve
+    position: absolute
+    bottom: 0
+    z-index: -1
+    right: 0
+    width: 100%
+    height: rem(320px)
+    background: url("../images/services/curve.png") repeat
+
+
+  &__icon
+    max-width: 100%
+    margin: 0 auto
+
+  &__title
+    margin-top: rem(23px)
+    color: $titleColor
+    font-size: rem(20px)
+    text-transform: uppercase
+
+  &__line
+    margin: rem(10px) auto rem(20px)
+    width: rem(60px)
+    height: rem(2px)
+    background: $secondColor
+
+
+  &__subtitle
+    color: $subtitleColor
+

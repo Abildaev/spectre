@@ -1,0 +1,89 @@
+.contact
+
+  &__group
+    position: relative
+
+  &__icon
+    opacity: 0.13
+    position: absolute
+    right: 0
+    top: 10%
+
+  &__forms
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-start
+    +tablet
+      justify-content: space-between
+
+
+  &__form
+    padding: rem(10px) 0
+    outline: none
+    font-family: $font
+    color: $subtitleColor
+    width: 100%
+    box-sizing: border-box
+    background: none
+    border-top: 0
+    border-right: 0
+    border-left: 0
+    border-bottom: rem(1px) solid $WhiteColor
+    margin-bottom: rem(30px)
+
+    @include placeholder()
+      font-family: $font
+      font-size: rem(18px)
+      color: $WhiteColor
+
+    &_message
+      font-size: rem(16px)
+      resize: none
+      +tablet
+        padding-bottom: rem(55px)
+
+
+    &_input
+      font-size: rem(18px)
+      +tablet
+        width: 80%
+
+
+  &__button
+    margin: 0 auto
+    background: $secondColor
+    cursor: pointer
+    border: 1px solid rgba(215, 255, 84, 0)
+    padding: rem(12px) rem(24px)
+    font-size: rem(18px)
+    font-weight: 500
+    color: $mainColor
+    transition: 0.5s
+    box-sizing: border-box
+    text-transform: uppercase
+    border-radius: rem(20px)
+    +tablet
+      margin: rem(25px) 0 0
+
+
+  &__button:hover
+    border: 1px solid rgba(215, 255, 84, 1)
+    background: none
+    color: $WhiteColor
+
+
+
+
+
+
+
+
+  &__flex
+    width: 80%
+    +tablet
+      width: 48%
+
+.contact__form.is-active
+  border-bottom: rem(1px) solid $secondColor

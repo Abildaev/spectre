@@ -1,0 +1,190 @@
+html, body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  background: $bgColorTwo
+  font-family: $font
+
+h1,h2,h3,h4
+  margin: 0
+
+a
+  text-decoration: none
+
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+.container
+  padding: 0 rem(15px)
+  margin: 0 auto
+  max-width: $width
+
+.wrapper
+  position: relative
+  overflow: hidden
+  min-height: 100%
+
+  &.fixed
+    height: 100%
+
+
+
+.content
+  width: 100%
+  height: 100%
+  position: absolute
+  background: #fff
+  z-index: 2
+  transition: transform 0.4s linear, opacity 0.2s linear 0.2s, visibility 0s linear 0.4s
+  transition-timing-function: cubic-bezier(0.8, 0, 0.6, 1), linear, linear
+
+  &.scaled
+    transform: scale(0.9) translateX(-80%)
+    border-radius: 3px
+    box-shadow: 0 3px 22px 0 $secondColor
+
+.lightbg
+  padding: rem(70px) 0
+
+.darkbg
+  background: $bgColor
+  padding: rem(70px) 0
+
+
+.title
+  margin: 0 0 rem(50px)
+  text-align: center
+
+  &__main
+    font-weight: 500
+    text-transform: uppercase
+    color: $WhiteColor
+    font-size: rem(28px)
+    +tablet
+      font-size: rem(32px)
+
+  &__line
+    margin: rem(20px) auto rem(10px)
+    width: rem(130px)
+    height: rem(5px)
+    border-radius: rem(20px)
+    background: $secondColor
+
+  &__secondary
+    margin: 0 auto
+    width: 80%
+    color: $subtitleColor
+    +tablet
+      width: 50%
+
+
+.form__container
+  border-radius: rem(20px)
+  position: relative
+  width: 90%
+  margin: 0 auto
+  box-sizing: border-box
+  padding: rem(50px)
+  background: $bgColor
+  +tablet
+    width: 50%
+  +desktop
+    width: 35%
+
+  h3
+    text-align: center
+    color: $secondColor
+    font-size: rem(18px)
+    font-weight: 400
+    +tablet
+      font-size: rem(24px)
+
+
+
+
+.form__icon
+  opacity: 0.13
+  position: absolute
+  right: 0
+  top: 25%
+
+
+.popup
+
+  &__input
+    padding: rem(10px) 0
+    outline: none
+    font-family: $font
+    color: $subtitleColor
+    width: 100%
+    font-size: rem(18px)
+    box-sizing: border-box
+    background: none
+    border-top: 0
+    border-right: 0
+    border-left: 0
+    border-bottom: rem(1px) solid $WhiteColor
+    margin-bottom: rem(30px)
+    @include placeholder()
+      font-family: $font
+      font-size: rem(16px)
+      color: $WhiteColor
+      +tablet
+        font-size: rem(18px)
+
+    &.is-active
+      border-bottom: rem(1px) solid $secondColor
+
+
+  &__form
+    text-align: center
+    margin-top: rem(30px)
+
+
+  &__button
+    margin: 0 auto
+    cursor: pointer
+    background: $secondColor
+    border: 1px solid rgba(215, 255, 84, 0)
+    padding: rem(12px) rem(24px)
+    font-weight: 500
+    color: $mainColor
+    transition: 0.5s
+    box-sizing: border-box
+    text-transform: uppercase
+    border-radius: rem(20px)
+    +tablet
+      font-size: rem(18px)
+      margin: rem(25px) auto 0
+
+
+  &__button:hover
+    border: 1px solid rgba(215, 255, 84, 1)
+    background: none
+    color: $WhiteColor
+
+
+  &__close
+    background: $secondColor
+    transition: 0.5s
+    color: $bgColorTwo
+    border-radius: rem(20px)
+    font-size: rem(18px)
+    border: rem(1px) solid rgba(215,255,84, 0)
+    position: absolute
+    right: rem(10px)
+    top: rem(10px)
+
+  &__close:hover
+    border: rem(1px) solid rgba(215,255,84, 1)
+    color: $WhiteColor
+    background: none
+
+
+
+
+
+
